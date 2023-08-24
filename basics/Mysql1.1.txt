@@ -1,0 +1,55 @@
+mysql> desc student;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| name  | varchar(200) | YES  |     | NULL    |       |
+| age   | int          | YES  |     | NULL    |       |
+| Score | int          | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+
+mysql> desc customer_table;
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| customer_id   | int          | YES  |     | NULL    |       |
+| first_name    | varchar(200) | YES  |     | NULL    |       |
+| last_name     | varchar(200) | YES  |     | NULL    |       |
+| date_of_birth | date         | YES  |     | NULL    |       |
+| address       | text         | YES  |     | NULL    |       |
+| phone_number  | int          | YES  |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+
+mysql> desc order_detaile;
++------------------+----------+------+-----+---------+-------+
+| Field            | Type     | Null | Key | Default | Extra |
++------------------+----------+------+-----+---------+-------+
+| order_id         | int      | YES  |     | NULL    |       |
+| Customer_id      | int      | YES  |     | NULL    |       |
+| order_datetime   | datetime | YES  |     | NULL    |       |
+| shipped_datetime | datetime | YES  |     | NULL    |       |
+| total_amount     | float    | YES  |     | NULL    |       |
++------------------+----------+------+-----+---------+-------+
+
+mysql> insert into student values("Antony",21,100);
+mysql> select * from student;
++--------+------+-------+
+| name   | age  | Score |
++--------+------+-------+
+| Antony |   21 |   100 |
++--------+------+-------+
+
+mysql> insert into student values("Raja",23,85);
+mysql> select * from student;
++--------+------+-------+
+| name   | age  | Score |
++--------+------+-------+
+| Antony |   21 |   100 |
+| Raja   |   23 |    85 |
++--------+------+-------+
+
+mysql> select * from student where name="Antony";
++--------+------+-------+
+| name   | age  | Score |
++--------+------+-------+
+| Antony |   21 |   100 |
++--------+------+-------+
